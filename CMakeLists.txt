@@ -1,2 +1,3 @@
 project(CMakeTestbed)
-add_executable(main main.c)
+
+add_subdirectory(src)
