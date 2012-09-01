@@ -30,7 +30,7 @@ int main()
     int rhs = 0;;
 
     printf("(calc) ");
-    while (gets(cmd_line))
+    while (fgets(cmd_line, sizeof(cmd_line), stdin))
     {
         lhs = 0;
         op = '\0';
