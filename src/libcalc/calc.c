@@ -7,7 +7,7 @@ int add(int lhs, int rhs)
 
 int sub(int lhs, int rhs)
 {
-    return lhs + rhs;
+    return lhs - rhs;
 }
 
 int multi(int lhs, int rhs)
