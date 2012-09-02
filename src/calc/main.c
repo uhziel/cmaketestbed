@@ -40,6 +40,7 @@ int main()
         sscanf(cmd_line, "%d %c %d", &lhs, &op, &rhs);
         printf("%d\n", calc(lhs, op, rhs));
 
+        add_history(cmd_line);
         free(cmd_line);
     }
     printf("\n");
