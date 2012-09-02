@@ -11,13 +11,13 @@ int calc(int lhs, char op, int rhs)
     switch (op)
     {
         case '+':
-            return add(lhs, rhs);
+            return my_add(lhs, rhs);
         case '-':
-            return sub(lhs, rhs);
+            return my_sub(lhs, rhs);
         case '*':
-            return multi(lhs, rhs);
+            return my_multi(lhs, rhs);
         case '/':
-            return div(lhs, rhs);
+            return my_div(lhs, rhs);
         default:
             return 0;
     }

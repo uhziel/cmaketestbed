@@ -1,21 +1,21 @@
 #include "calc.h"
 
-int add(int lhs, int rhs)
+int my_add(int lhs, int rhs)
 {
     return lhs + rhs;
 }
 
-int sub(int lhs, int rhs)
+int my_sub(int lhs, int rhs)
 {
     return lhs - rhs;
 }
 
-int multi(int lhs, int rhs)
+int my_multi(int lhs, int rhs)
 {
     return lhs * rhs;
 }
 
-int div(int lhs, int rhs)
+int my_div(int lhs, int rhs)
 {
     return lhs / rhs;
 }
