@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <readline/readline.h>
+#include <readline/history.h>
 
 #include "calc.h"
 
 #define BUF_SIZE 1024
-
-char cmd_line[BUF_SIZE];
 
 int calc(int lhs, char op, int rhs)
 {
@@ -28,18 +29,18 @@ int main()
     int lhs = 0;
     char op = '\0';
     int rhs = 0;;
+    char* cmd_line;
 
-    printf("(calc) ");
-    while (fgets(cmd_line, sizeof(cmd_line), stdin))
+    while (cmd_line=readline("(calc) "))
     {
         lhs = 0;
         op = '\0';
         rhs = 0;
 
-        sscanf(cmd_line, "%d %c %d\n", &lhs, &op, &rhs);
+        sscanf(cmd_line, "%d %c %d", &lhs, &op, &rhs);
         printf("%d\n", calc(lhs, op, rhs));
 
-        printf("(calc) ");
+        free(cmd_line);
     }
     printf("\n");
     return 0;
