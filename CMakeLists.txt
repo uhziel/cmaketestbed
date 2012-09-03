@@ -1,6 +1,11 @@
 project(CMakeTestbed)
 cmake_minimum_required(VERSION 2.8)
 
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
+# find package
+find_package(Readline)
+
 # rpath http://www.cmake.org/Wiki/CMake_RPATH_handling
 SET(CMAKE_SKIP_BUILD_RPATH  FALSE)
 SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE) 
